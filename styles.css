@@ -103,11 +103,21 @@ img {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: var(--bordeaux);
+  background: var(--bordeaux) url('assets/hero-bistrot.png') center/cover no-repeat;
   color: #f3e9df;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .hero__inner {
+  position: relative;
+  z-index: 1;
   max-width: 1080px;
   margin: 0 auto;
   padding: 72px 24px;
@@ -232,6 +242,22 @@ img {
 .menu-course__desc {
   color: var(--muted);
   margin: 0;
+}
+
+.course-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin: 12px 0 16px;
+}
+
+.recipe-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 3px;
+  margin-bottom: 24px;
 }
 
 .price-tag {
