@@ -312,6 +312,15 @@ img {
   gap: 28px;
 }
 
+.staff__portrait {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 3px;
+  margin-bottom: 14px;
+}
+
 .staff__role {
   color: var(--bordeaux);
   font-size: 0.85rem;
