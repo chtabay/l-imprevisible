@@ -67,7 +67,7 @@ img {
 }
 
 .brand__logo {
-  height: 22px;
+  height: 40px;
   width: auto;
   display: block;
 }
@@ -272,6 +272,40 @@ img {
   font-family: Georgia, serif;
   font-size: 2rem;
   color: var(--bordeaux);
+}
+
+/* ---------- Composition (menu) ---------- */
+.composition {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 16px 18px;
+  margin-top: 14px;
+  font-size: 0.92rem;
+}
+
+.composition__title {
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bordeaux);
+  margin: 0 0 10px;
+}
+
+.composition__list {
+  margin: 0 0 10px;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.composition__meta {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.composition__meta strong {
+  color: var(--ink);
 }
 
 /* ---------- Tables ---------- */
