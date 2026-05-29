@@ -1,62 +1,52 @@
-# L'imprévisible 🍽️
+# L'imprévisible
 
-> Site web fictif d'un restaurant où, paradoxalement, **rien n'est imprévisible**.
-
-Projet de site statique destiné à être publié sur **GitHub Pages**. Il met en scène
-un restaurant satirique nommé _L'imprévisible_, dont le concept repose entièrement
-sur l'ironie : tout y est figé, documenté à l'excès et radicalement transparent.
+Site web du restaurant **L'imprévisible**, table de moyenne gamme proposant une
+cuisine française de marché. Site statique destiné à être publié sur GitHub Pages.
 
 ---
 
-## 🎭 Le concept
+## Le restaurant
 
-D'après le pitch d'origine :
+L'imprévisible est un restaurant qui repose sur une idée simple : **un menu unique,
+travaillé avec soin, et une transparence totale** vis-à-vis de ses clients. Pas de
+carte interminable ni de choix superflus : une proposition par service, pensée pour
+être maîtrisée du début à la fin.
 
-- **Menu unique.** Il ne varie jamais.
-- **La blague immuable du serveur**, qui demande toujours si vous avez choisi
-  exactement **7 minutes** après votre installation.
-- **Ingrédients et recettes** décrits avec un excès de détails maladif.
-- **CV et salaire** de chaque membre du personnel affichés publiquement.
-- **Bilan financier** de l'entreprise affiché.
-- **Business plan sur 100 ans** affiché.
-- **Procédure en cas de prise d'otage** clairement décrite.
-- **Tout est prépayé.**
-
-L'humour naît du contraste entre le nom (« L'imprévisible ») et l'hyper-prévisibilité
-absolue de l'établissement.
-
-🔗 Pitch source : <https://1m-pitch.vercel.app/pitch/4a87ab28-5d42-4264-90ab-47a9a2d46b31>
+Notre engagement : que chaque client sache précisément ce qu'il mange, qui le cuisine
+et comment la maison fonctionne.
 
 ---
 
-## 🗂️ Structure prévue du site
+## Ce qui nous distingue
 
-| Section | Contenu |
+- **Un menu unique.** Une seule proposition, constante, pour garantir la régularité
+  et la qualité d'exécution.
+- **Une cuisine documentée.** Chaque plat est accompagné du détail de ses ingrédients,
+  de leur provenance et de sa recette.
+- **Une équipe présentée.** Le parcours de chaque membre du personnel est affiché.
+- **Une gestion transparente.** Les comptes et le bilan de l'établissement sont
+  consultables.
+- **Une vision de long terme.** Notre projet d'entreprise et sa feuille de route
+  sont publics.
+- **Tout est prépayé.** La réservation vaut règlement : aucune addition en fin de repas.
+
+---
+
+## Structure du site
+
+| Page | Contenu |
 |---|---|
-| Accueil | Présentation du concept et de l'ironie de la maison |
-| Le Menu | Le menu unique, immuable, prépayé |
-| La Blague | Explication officielle de la blague des 7 minutes |
-| Ingrédients & Recettes | Fiches techniques détaillées à l'extrême |
-| L'Équipe | CV + salaire de chaque employé |
-| Transparence | Bilan financier de l'entreprise |
-| Business Plan | Feuille de route sur 100 ans |
-| Sécurité | Procédure officielle en cas de prise d'otage |
+| Accueil | Présentation du restaurant et de sa philosophie |
+| Le Menu | Le menu unique du service |
+| Cuisine | Ingrédients, provenance et recettes détaillées |
+| L'Équipe | Parcours et rôle de chaque membre du personnel |
+| Transparence | Comptes et bilan de l'établissement |
+| Notre projet | Feuille de route et engagements de long terme |
+| Réservation | Réservation et règlement en ligne |
 
 ---
 
-## 🛠️ Stack technique
+## Stack technique
 
 - HTML / CSS / JavaScript statiques (aucun build requis).
-- Hébergement via **GitHub Pages**.
-
-## 🚀 Publication (à venir)
-
-La publication sur GitHub Pages **n'est pas encore réalisée**. Elle se fera dans une
-étape ultérieure, une fois le contenu du site finalisé.
-
----
-
-## 📄 Avertissement
-
-Restaurant, personnel, salaires, bilans et procédures sont **entièrement fictifs**.
-Toute ressemblance avec un établissement réel serait parfaitement… imprévisible.
+- Hébergement via GitHub Pages.
