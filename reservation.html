@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Réservation — L'imprévisible</title>
+  <meta name="description" content="Réservez votre table à L'imprévisible. Le menu unique est réglé à la réservation." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">L'imprévisible</span>
+        <span class="brand__tag">Bistrot · Cuisine française</span>
+      </a>
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="menu.html">Le Menu</a></li>
+          <li><a href="cuisine.html">Cuisine</a></li>
+          <li><a href="equipe.html">L'Équipe</a></li>
+          <li><a href="transparence.html">Transparence</a></li>
+          <li><a href="projet.html">Notre projet</a></li>
+          <li><a href="reservation.html" aria-current="page">Réservation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap wrap--narrow">
+    <h1 class="page-title">Réservation</h1>
+    <p class="page-subtitle">
+      Choisissez votre date et le nombre de couverts. Le menu unique à 32 € par personne
+      est réglé au moment de la réservation.
+    </p>
+
+    <form id="reservation-form" novalidate>
+      <div class="field">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required autocomplete="name" />
+      </div>
+
+      <div class="field">
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" required autocomplete="email" />
+      </div>
+
+      <div class="field">
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required />
+      </div>
+
+      <div class="field">
+        <label for="service">Service</label>
+        <select id="service" name="service">
+          <option value="midi">Déjeuner (12h–14h)</option>
+          <option value="soir">Dîner (19h–22h)</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="couverts">Nombre de couverts</label>
+        <select id="couverts" name="couverts">
+          <option>1</option><option>2</option><option>3</option>
+          <option>4</option><option>5</option><option>6</option>
+        </select>
+      </div>
+
+      <div class="form-note">
+        <strong>Montant à régler : <span id="total">32 €</span></strong><br />
+        La réservation vaut règlement du menu. Il n'y a pas d'addition en fin de repas.
+      </div>
+
+      <button type="submit" class="btn btn--ghost">Réserver et régler</button>
+    </form>
+
+    <p id="confirmation" class="muted" style="margin-top:24px;" hidden></p>
+
+    <section class="section">
+      <h2>Bon à savoir</h2>
+      <p class="muted">
+        Toute réservation est confirmée par e-mail. En cas d'empêchement, l'annulation
+        est possible et remboursée jusqu'à 48 heures avant le service. Le menu est
+        unique et identique à chaque service ; les allergènes sont indiqués sur la page
+        <a href="cuisine.html">Cuisine</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <strong>L'imprévisible</strong><br />
+        12 rue des Petites-Écuries, 75010 Paris<br />
+        01 23 45 67 89 — bonjour@limprevisible.fr
+      </div>
+      <div>
+        Mardi – Samedi · 12h–14h / 19h–22h<br />
+        <a href="transparence.html">Comptes</a> · <a href="projet.html">Notre projet</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var PRIX = 32;
+      var couverts = document.getElementById("couverts");
+      var total = document.getElementById("total");
+      var form = document.getElementById("reservation-form");
+      var confirmation = document.getElementById("confirmation");
+
+      function majTotal() {
+        var n = parseInt(couverts.value, 10) || 1;
+        total.textContent = n * PRIX + " €";
+      }
+      couverts.addEventListener("change", majTotal);
+      majTotal();
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        var n = parseInt(couverts.value, 10) || 1;
+        confirmation.hidden = false;
+        confirmation.textContent =
+          "Merci, votre réservation pour " + n +
+          " couvert(s) est enregistrée. Un e-mail de confirmation vous a été envoyé.";
+        form.reset();
+        majTotal();
+      });
+    })();
+  </script>
+</body>
+</html>

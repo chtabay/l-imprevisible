@@ -1,0 +1,401 @@
+:root {
+  --cream: #f6f1e7;
+  --paper: #fbf8f1;
+  --ink: #2a2622;
+  --muted: #6b635a;
+  --line: #ddd3c4;
+  --bordeaux: #6e2b2b;
+  --bordeaux-dark: #531f1f;
+  --olive: #5b5e44;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+  font-size: 17px;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+a {
+  color: var(--bordeaux);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.site-header__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.brand__name {
+  font-family: Georgia, serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+.brand__tag {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.92rem;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover,
+.nav a[aria-current="page"] {
+  color: var(--bordeaux);
+  border-bottom-color: var(--bordeaux);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--bordeaux);
+  color: #f3e9df;
+}
+
+.hero__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 72px 24px;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin: 0 0 14px;
+}
+
+.hero p {
+  max-width: 620px;
+  font-size: 1.1rem;
+  margin: 0 0 28px;
+  color: #ecdcd0;
+}
+
+/* ---------- Layout ---------- */
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.wrap--narrow {
+  max-width: 760px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+.page-title {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin: 0 0 8px;
+}
+
+.page-subtitle {
+  color: var(--muted);
+  margin: 0 0 36px;
+  font-size: 1.05rem;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  background: #f3e9df;
+  color: var(--bordeaux-dark);
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #fff;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--bordeaux);
+  border-color: var(--bordeaux);
+}
+
+.btn--ghost:hover {
+  background: var(--bordeaux);
+  color: #fff;
+}
+
+/* ---------- Cards / grids ---------- */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 26px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* ---------- Menu ---------- */
+.menu-course {
+  margin-bottom: 40px;
+}
+
+.menu-course__label {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  color: var(--bordeaux);
+  margin-bottom: 6px;
+}
+
+.menu-course__name {
+  font-size: 1.5rem;
+  margin: 0 0 6px;
+}
+
+.menu-course__desc {
+  color: var(--muted);
+  margin: 0;
+}
+
+.price-tag {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  color: var(--bordeaux);
+}
+
+/* ---------- Tables ---------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0;
+  background: var(--paper);
+}
+
+.table caption {
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.96rem;
+}
+
+.table th {
+  background: #efe7d8;
+  font-family: Georgia, serif;
+  font-weight: 600;
+}
+
+.table td.num,
+.table th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.table tfoot td {
+  font-weight: 700;
+  border-top: 2px solid var(--line);
+}
+
+/* ---------- Staff ---------- */
+.staff {
+  display: grid;
+  gap: 28px;
+}
+
+.staff__role {
+  color: var(--bordeaux);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 2px;
+}
+
+.staff h3 {
+  margin: 0 0 4px;
+}
+
+.staff__meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0 0 10px;
+}
+
+.staff ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.salary {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ---------- Recipe ---------- */
+.recipe h3 {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 8px;
+}
+
+.recipe__cols {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 32px;
+}
+
+.recipe__cols ol,
+.recipe__cols ul {
+  padding-left: 20px;
+}
+
+/* ---------- Forms ---------- */
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font: inherit;
+  background: #fff;
+}
+
+.form-note {
+  background: #efe7d8;
+  border-left: 3px solid var(--bordeaux);
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  margin: 24px 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer__inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 36px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-footer a {
+  color: var(--muted);
+}
+
+/* ---------- Utilities ---------- */
+.muted { color: var(--muted); }
+.mt-0 { margin-top: 0; }
+.center { text-align: center; }
+
+@media (max-width: 640px) {
+  .recipe__cols {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .hero__inner {
+    padding: 52px 20px;
+  }
+}

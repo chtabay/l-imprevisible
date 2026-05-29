@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Menu — L'imprévisible</title>
+  <meta name="description" content="Le menu unique de L'imprévisible : entrée, plat, dessert. Prix unique, réglé à la réservation." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name">L'imprévisible</span>
+        <span class="brand__tag">Bistrot · Cuisine française</span>
+      </a>
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="menu.html" aria-current="page">Le Menu</a></li>
+          <li><a href="cuisine.html">Cuisine</a></li>
+          <li><a href="equipe.html">L'Équipe</a></li>
+          <li><a href="transparence.html">Transparence</a></li>
+          <li><a href="projet.html">Notre projet</a></li>
+          <li><a href="reservation.html">Réservation</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap wrap--narrow">
+    <h1 class="page-title">Le Menu</h1>
+    <p class="page-subtitle">
+      Une seule proposition, servie midi et soir. Le même menu, chaque jour.
+    </p>
+
+    <div class="menu-course">
+      <p class="menu-course__label">Entrée</p>
+      <h2 class="menu-course__name">Œuf mayonnaise, salade de saison</h2>
+      <p class="menu-course__desc">
+        Œuf fermier mollet, mayonnaise maison à l'huile de tournesol et moutarde de
+        Dijon, mesclun assaisonné à l'huile d'olive et au vinaigre de vin.
+      </p>
+    </div>
+
+    <div class="menu-course">
+      <p class="menu-course__label">Plat</p>
+      <h2 class="menu-course__name">Bœuf bourguignon, purée maison</h2>
+      <p class="menu-course__desc">
+        Paleron de bœuf charolais mijoté au vin rouge de Bourgogne, lardons, champignons
+        de Paris et oignons grelots. Servi avec une purée de pommes de terre au beurre.
+      </p>
+    </div>
+
+    <div class="menu-course">
+      <p class="menu-course__label">Dessert</p>
+      <h2 class="menu-course__name">Mousse au chocolat</h2>
+      <p class="menu-course__desc">
+        Mousse au chocolat noir 64 %, œufs fermiers, servie en verrine. Préparée le
+        matin même.
+      </p>
+    </div>
+
+    <hr style="border:none;border-top:1px solid var(--line);margin:36px 0;" />
+
+    <p>
+      <span class="price-tag">32 €</span>
+      <span class="muted"> par personne — entrée, plat, dessert.</span>
+    </p>
+    <p class="muted">
+      Le pain, l'eau et le café sont compris. Le menu est réglé à la réservation
+      (voir <a href="reservation.html">Réservation</a>).
+    </p>
+    <p class="muted">
+      Le détail des ingrédients, leur provenance et les recettes complètes sont
+      disponibles sur la page <a href="cuisine.html">Cuisine</a>.
+    </p>
+
+    <p style="margin-top:32px;">
+      <a class="btn btn--ghost" href="reservation.html">Réserver une table</a>
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        <strong>L'imprévisible</strong><br />
+        12 rue des Petites-Écuries, 75010 Paris<br />
+        01 23 45 67 89 — bonjour@limprevisible.fr
+      </div>
+      <div>
+        Mardi – Samedi · 12h–14h / 19h–22h<br />
+        <a href="transparence.html">Comptes</a> · <a href="projet.html">Notre projet</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
